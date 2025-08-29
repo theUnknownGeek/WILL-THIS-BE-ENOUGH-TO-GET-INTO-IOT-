@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Personal Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h2>Harsh Vardhan</h2>
+
+      <nav>
+        <ul class="nav-menu">
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section id="about" class="reveal">
+      <h4>About Harsh Vardhan</h4>
+
+      <p>
+        Im Harsh Vardhan, a second-year engineering student at KIIT from Bihar,
+        passionate about coding, finance, and public speaking. I enjoy solving
+        competitive programming challenges, exploring creative projects, and
+        engaging in community activities. Driven by curiosity and ambition, I
+        aim to grow my skills and make a meaningful impact.
+      </p>
+    </section>
+
+    <section id="projects" class="reveal">
+      <h4>Projects made by Harsh Vardhan</h4>
+
+      <div class="projects_container">
+        <div class="proj1 placeholder">
+          <a href="PROJECTS/Simon/index.html" target="_blank" class="proj1 placeholder">
+            <div class="proj1_text">
+              <h3>SIMON GAME</h3>
+
+              <p>One of the first things i made - a fun memory game!</p>
+            </div>
+          </a>
+        </div>
+
+        <div class="proj2 placeholder">
+          <a href="PROJECTS/DICE GAME/index.html" target="_blank" class="proj2 placeholder">
+            <div class="proj2_text">
+              <h3>DICE GAME</h3>
+
+              <p>A Dice-Game to decide on something when not certain!</p>
+            </div>
+          </a>
+        </div>
+
+        <div class="proj3 placeholder">
+          <div class="proj3_text">
+            <h3>THIS IS IN PROGRESS</h3>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="cp">
+      <h4>Competative platforms of Harsh Vardhan</h4>
+
+      <div class="cpp">
+        <div class="cf placeholder">
+          <a
+            href="https://codeforces.com/profile/theUnknown_Geek"
+            target="_blank"
+            class="cf placeholder"
+          >
+            <div class="cf_text">
+              <h3>CODEFORCES</h3>
+            </div>
+          </a>
+        </div>
+
+        <div class="cc placeholder">
+          <a
+            href="https://www.codechef.com/users/unknowngeekme"
+            target="_blank"
+            class="cc placeholder"
+          >
+            <div class="cc_text">
+              <h3>CODECHEF</h3>
+            </div>
+          </a>
+        </div>
+
+        <div class="lc placeholder">
+          <a
+            href="https://leetcode.com/u/the_UnknownGeek/"
+            target="_blank"
+            class="lc placeholder"
+          >
+            <div class="lc_text">
+              <h3>LEETCODE</h3>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="reveal">
+      <h4>Contact</h4>
+
+      <form id="contactForm" action="submit_form.php" method="post">
+        <div class="inputF">
+          <div class="name">
+            <label for="name">Name:</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Enter Your Name"
+              required
+            />
+          </div>
+
+          <div class="mail">
+            <label for="email">E-Mail:</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Enter Your e-mail"
+              required
+            />
+          </div>
+        </div>
+
+        <div class="message">
+          <label for="message">Message:</label>
+          <textarea
+            id="message"
+            name="message"
+            placeholder="Write your message here..."
+            rows="4"
+            required
+          ></textarea>
+        </div>
+
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+
+    <footer>
+      <p>&copy; 2025 Harsh Vardhan. All Rights Reserved.</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>

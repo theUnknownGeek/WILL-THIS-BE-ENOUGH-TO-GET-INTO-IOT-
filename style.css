@@ -1,0 +1,335 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background-color: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav-menu {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+#about {
+  padding: 40px;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  /*background-color: #fafafa;*/
+  text-align: center;
+}
+
+.nav-menu a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-menu a:hover {
+  color: #0056b3;
+}
+
+section {
+  padding: 40px 0;
+}
+
+body {
+  background-color: #f5f5f5;
+  color: #333;
+  font-family: "Poppins", sans-serif;
+  line-height: 1.6;
+  scroll-behavior: smooth;
+  padding: 0 20px;
+}
+
+h1,
+h2,
+h4 {
+  font-weight: 700;
+  color: #222;
+}
+
+h1 h2 {
+  margin-top: 30px;
+}
+
+h4 {
+  margin-bottom: 30px;
+}
+
+p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 1em;
+  line-height: 1.6;
+}
+
+.projects_container , .cpp{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.placeholder {
+  background-color: #f0f0f0;
+  height: 175px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #777;
+  font-style: italic;
+}
+
+/*This is for project 1*/
+.proj1::before,
+.proj2::before,
+.proj3::before,
+.cf::before,
+.cc::before,
+.lc::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65);
+  z-index: 0;
+}
+
+.proj1{
+  background-image: url(simon.png);
+  background-size: cover;
+  background-position: center;
+  height: 200px;
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.cf{
+  background-image: url(cflogo.png);
+  background-size: cover;
+  background-position: center;
+  height: 200px;
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.proj1_text,
+.proj2_text,
+.proj3_text,
+.cf_text,
+.cc_text,
+.lc_text {
+  position: absolute;
+  right: 15px;
+  bottom: 15px;
+  left: 15px;
+  color: white;
+  font-weight: bold;
+  z-index: 1;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.proj1_text h3,
+.proj2_text h3,
+.proj3_text h3,
+.cf_text h3,
+.cc_text h3,
+.lc_text h3 {
+  color: white;
+  font-style: normal;
+  font-weight: bold;
+  margin: 0;
+  font-size: 1.3rem;
+}
+
+.proj1_text p,
+.proj2_text p,
+.proj3_text p,
+.cf_text p,
+.cc_text p,
+.lc_text p {
+  font-size: 0.95rem;
+  margin: 5px 0 0;
+  font-weight: normal;
+  color: white;
+  font-style: normal;
+  line-height: 1.4;
+}
+
+/*This is for project 2*/
+
+.proj2{
+  background-image: url(dice.png);
+  background-size: cover;
+  background-position: center;
+  height: 200px;
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.cc{
+  background-image: url(cclogo.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 200px;
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+/*This is for project 3*/
+
+.proj3{
+  background-image: url(soon.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 200px;
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.lc{
+  background-image: url(lclogo.png);
+  background-size: cover;
+  background-position: center;
+  height: 200px;
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.proj1,
+.proj2,
+.proj3,
+.cf,
+.cc,
+.lc {
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  cursor: pointer;
+}
+
+.proj1, .proj2, .cf, .cc, .lc {
+  display: block;        
+  text-decoration: none; 
+  color: inherit;        
+}
+
+.proj1:hover .proj1_text,
+.proj2:hover .proj2_text,
+.proj3:hover .proj3_text,
+.cf:hover .cf_text,
+.cc:hover .cc_text,
+.lc:hover .lc_text {
+  transform: scale(1.05) translateY(0);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  opacity: 1;
+}
+
+input,
+textarea {
+  display: block;
+  margin: 10px;
+  width: 100%;
+  max-width: 500px;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border: 1px solid #0056b3;
+  box-shadow: 0 0 6px rgba(0, 86, 179, 0.3);
+  transition: all 0.3s ease;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px 20px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+  border-radius: 8px;
+}
+
+.inputF {
+  display: flex;
+  gap: 15px; /* space between the inputs */
+  width: 100%;
+  max-width: 500px; /* keeps it from stretching too wide */
+}
+
+.inputF input {
+  flex: 1; /* makes each input take equal available space */
+}
+
+button {
+  background-color: #0056b3;
+  color: white;
+  padding: 12px 25px;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #004494;
+  transform: scale(1.03);
+  transition: all 0.3s ease;
+}
+
+#contact {
+  padding-top: 20px; /* pushes title away from previous section */
+  padding-bottom: 20px; /* keeps some gap before footer */
+}
+
+#contact h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #0056b3;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+  #projects {
+    grid-template-columns: 1fr;
+  }
+  .inputF {
+    flex-direction: column;
+  }
+  textarea {
+    width: 100%; /* stays full width on mobile */
+  }
+}
